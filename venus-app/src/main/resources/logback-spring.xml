@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProperty scope="context" name="logbackpattern" source="spring.logbackpattern"/>
+    <springProperty scope="context" name="logbackerrorpattern" source="spring.logbackerrorpattern"/>
+    <springProperty scope="context" name="logbackinvokepattern" source="spring.logbackinvokepattern"/>
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+
+    <!--app 日志-->
+    <appender name="app" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-app.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-app.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+    </appender>
+
+
+    <!--invoke 日志-->
+    <appender name="invokeFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-invoke.log</file>
+        <encoder>
+            <pattern>${logbackinvokepattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-invoke.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+    </appender>
+
+
+    <!--service 日志-->
+    <appender name="serviceFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-service.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-service.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+    </appender>
+
+    <!--Handler 日志-->
+    <appender name="handlerFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-biz.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-biz.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+    </appender>
+
+
+    <!--SQL 日志-->
+    <appender name="sqlFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-sql.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-sql.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>DENY</OnMismatch>
+        </filter>
+    </appender>
+
+    <!--SAL 日志-->
+    <appender name="salFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-sal.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-sal.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>DENY</OnMismatch>
+        </filter>
+    </appender>
+
+
+    <!--Spring 框架打出的日志-->
+    <appender name="springFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-spring.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-spring.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+            <CleanHistoryOnStart>true</CleanHistoryOnStart>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>DENY</OnMismatch>
+        </filter>
+    </appender>
+
+    <!--Error 日志-->
+    <appender name="errFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-error.log</file>
+        <encoder>
+            <pattern>${logbackerrorpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-error.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+
+    <!--Common 日志-->
+    <appender name="commonFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-common.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-common.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+    </appender>
+
+
+    <appender name="costTimeAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/venus-costtime.log</file>
+        <encoder>
+            <pattern>${logbackpattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/venus-costtime.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <MaxHistory>7</MaxHistory>
+        </rollingPolicy>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <OnMismatch>NEUTRAL</OnMismatch>
+        </filter>
+    </appender>
+
+    <logger name="org.springframework" level="INFO" additivity="false">
+        <appender-ref ref="springFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.controller.aop.AopLogInspector" level="INFO" additivity="false">
+        <appender-ref ref="invokeFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.controller.aop" level="INFO" additivity="false">
+        <appender-ref ref="serviceFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.controller" level="INFO" additivity="false">
+        <appender-ref ref="serviceFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.biz" level="INFO" additivity="false">
+        <appender-ref ref="handlerFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.biz" level="INFO" additivity="false">
+        <appender-ref ref="serviceFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="serviceLog" level="INFO" additivity="false">
+        <appender-ref ref="serviceFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.sal" level="INFO" additivity="false">
+        <appender-ref ref="salFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.common" level="INFO" additivity="false">
+        <appender-ref ref="commonFileAppender"/>
+        <appender-ref ref="errFileAppender"/>
+    </logger>
+
+    <logger name="art.meiye.venus.dal" level="INFO" additivity="false">
+        <appender-ref ref="sqlFileAppender"/>
+    </logger>
+
+    <logger name="com.alibaba.druid.sql" level="DEBUG" additivity="false">
+        <appender-ref ref="sqlFileAppender"/>
+    </logger>
+
+    <root level="INFO" additivity="false">
+        <appender-ref ref="app"/>
+        <appender-ref ref="errFileAppender"/>
+    </root>
+
+
+</configuration>

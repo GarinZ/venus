@@ -1,0 +1,11 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    youyou:
+      jdbc-url: jdbc:mysql://119.29.234.21:3306/youyou?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: mestso
+      password: 6d7j^8k2@*j3^nd#did*$^nd#did*$
+      driver-class-name: com.mysql.cj.jdbc.Driver
+

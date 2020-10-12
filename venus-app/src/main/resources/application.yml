@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: dev
+  mail:
+    host: smtp.163.com
+    username: test
+    password: test
+    port: 465
+    protocol: smtps
+    properties.mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+            socketFactory.class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+            required: true
+        imap.ssl.socketFactory.fallback: false
+    redis:
+      database: 0
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 10
+          max-wait: 1ms
+          min-idle: 5
+        shutdown-timeout: 100ms
+
+mail.from: test@163.com # 需要和邮箱账户保持一致
+qiniu:
+  accessKey: ----
+  secretKey: ----
+  urlPrefix: http://images.psketch.com/
+  bucket: images
+wechat:
+  appId: ------
+  secretId: -----
+  stateKey: -----
+  bindStateToken: wechatBind
+  loginStateToken: wechatLogin
+

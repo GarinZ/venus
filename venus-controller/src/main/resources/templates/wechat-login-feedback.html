@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title微信登录反馈</title>
+    <style type="text/css">
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wechat-login-feedback-container">
+        <div class="wechat-login-feedback-main" th:text="${result}"></div>
+        <div id="status" class="wechat-login-feedback hidden" th:text="${isSuccess}"></div>
+    </div>
+    <script type="text/javascript">
+        var statusElement = document.getElementById('status');
+        var status = statusElement.innerText;
+        if (+status) {
+            window.opener.postMessage({status: +status}, "*");
+        }
+    </script>
+</body>
+</html>

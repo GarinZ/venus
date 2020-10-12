@@ -1,0 +1,23 @@
+2020-09-08 00:21:01,300 [SpringContextShutdownHook] [] [] [34mINFO [0;39m [36mc.z.h.HikariDataSource[0;39m method: [line:350] HikariPool-1 - Shutdown initiated...
+2020-09-08 00:21:01,311 [SpringContextShutdownHook] [] [] [34mINFO [0;39m [36mc.z.h.HikariDataSource[0;39m method: [line:352] HikariPool-1 - Shutdown completed.
+2020-09-08 00:21:37,572 [main] [] [] [34mINFO [0;39m [36ma.m.v.Application[0;39m method: [line:55] Starting Application on promote.cache-dns.local with PID 6184 (/Users/garin/Project/mestso/venus/venus-app/target/classes started by garin in /Users/garin/Project/mestso/venus)
+2020-09-08 00:21:37,576 [main] [] [] [34mINFO [0;39m [36ma.m.v.Application[0;39m method: [line:655] The following profiles are active: dev
+2020-09-08 00:21:39,058 [main] [] [] [34mINFO [0;39m [36mo.a.c.c.StandardService[0;39m method: [line:173] Starting service [Tomcat]
+2020-09-08 00:21:39,058 [main] [] [] [34mINFO [0;39m [36mo.a.c.c.StandardEngine[0;39m method: [line:173] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-08 00:21:39,127 [main] [] [] [34mINFO [0;39m [36mo.a.c.c.C.[.[.[/][0;39m method: [line:173] Initializing Spring embedded WebApplicationContext
+2020-09-08 00:21:40,795 [main] [] [] [34mINFO [0;39m [36ma.m.v.Application[0;39m method: [line:61] Started Application in 23.779 seconds (JVM running for 29.47)
+2020-09-08 00:21:40,879 [RMI TCP Connection(11)-192.168.0.122] [] [] [34mINFO [0;39m [36mc.z.h.HikariDataSource[0;39m method: [line:110] HikariPool-1 - Starting...
+2020-09-08 00:21:40,879 [RMI TCP Connection(10)-192.168.0.122] [] [] [34mINFO [0;39m [36mo.a.c.c.C.[.[.[/][0;39m method: [line:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-08 00:21:41,004 [RMI TCP Connection(11)-192.168.0.122] [] [] [34mINFO [0;39m [36mc.z.h.HikariDataSource[0;39m method: [line:123] HikariPool-1 - Start completed.
+2020-09-08 00:47:07,434 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m26s179ms).
+2020-09-08 01:19:00,951 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=31m23s507ms).
+2020-09-08 02:00:00,271 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m50s271ms).
+2020-09-08 02:39:52,950 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=39m22s669ms).
+2020-09-08 04:45:50,735 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27s734ms).
+2020-09-08 06:47:18,341 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27s612ms).
+2020-09-08 08:49:46,010 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27s659ms).
+2020-09-08 10:30:01,540 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h40m15s530ms).
+2020-09-08 13:30:29,739 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27s582ms).
+2020-09-08 14:21:43,380 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m43s634ms).
+2020-09-08 22:49:18,214 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m59s951ms).
+2020-09-08 23:45:50,005 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m1s701ms).

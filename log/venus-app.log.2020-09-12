@@ -1,0 +1,7 @@
+2020-09-12 00:48:04,971 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h17m13s128ms).
+2020-09-12 02:36:14,987 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h48m10s16ms).
+2020-09-12 06:12:27,896 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h36m12s908ms).
+2020-09-12 06:37:01,773 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m33s877ms).
+2020-09-12 19:49:08,409 [HikariPool-1 housekeeper] [] [] [31mWARN [0;39m [36mc.z.h.p.HikariPool[0;39m method: [line:787] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13h12m6s636ms).
+2020-09-12 20:13:24,986 [SpringContextShutdownHook] [] [] [34mINFO [0;39m [36mc.z.h.HikariDataSource[0;39m method: [line:350] HikariPool-1 - Shutdown initiated...
+2020-09-12 20:13:25,000 [SpringContextShutdownHook] [] [] [34mINFO [0;39m [36mc.z.h.HikariDataSource[0;39m method: [line:352] HikariPool-1 - Shutdown completed.
