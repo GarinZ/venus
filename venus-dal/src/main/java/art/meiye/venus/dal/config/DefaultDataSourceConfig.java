@@ -1,6 +1,3 @@
-/*
- * Copyright (C) 2018 Baidu, Inc. All Rights Reserved.
- */
 package art.meiye.venus.dal.config;
 
 import com.zaxxer.hikari.HikariDataSource;
@@ -20,9 +17,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
-/**
- * Created by Xuetong Zou on 2018/11/30. IRONMAN项目数据库数据源配置
- */
 @Configuration
 @MapperScan(basePackages = "art.meiye.venus.dal.mapper",
         sqlSessionFactoryRef = "mybatisSqlSessionFactory")
@@ -48,12 +42,6 @@ public class DefaultDataSourceConfig {
             throws Exception {
         SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource);
-
-//        if ("true".equals(sqlWwitch)) {
-//            Interceptor[] interceptors = new Interceptor[1];
-//            interceptors[0] = performanceInterceptorIron;
-//            sessionFactoryBean.setPlugins(interceptors);
-//        }
         String patternPath = ResourcePatternResolver.CLASSPATH_URL_PREFIX + "youyou/*Mapper.xml";
         sessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
                 .getResources(patternPath));
